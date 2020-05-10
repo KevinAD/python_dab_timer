@@ -52,9 +52,9 @@ DAB_WORD_MAX_ROWS = 5
 DAB_MAX_WORDS = DAB_WORD_MAX_COLS * DAB_WORD_MAX_ROWS
 
 #Timing stuff
-DEFAULT_HEAT = 5#25
-DEFAULT_COOL = 5#25
-DEFAULT_TIMEOUT = 5#8
+DEFAULT_HEAT = 25
+DEFAULT_COOL = 25
+DEFAULT_TIMEOUT = 8
 
 DEBUG = False
 
@@ -118,9 +118,9 @@ if __name__ == "__main__":
     save_cursor()
 
     #=== Start sound thread  ================================#
-    #s_thread = Thread(target=sound_thread,args = [BEEPS])
-    #s_thread.daemon = True
-    #s_thread.start()
+    s_thread = Thread(target=sound_thread,args = [BEEPS])
+    s_thread.daemon = True
+    s_thread.start()
 
     def signal_handler(*args):
         std_print(ESC+"[0m")
